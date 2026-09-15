@@ -21,30 +21,7 @@ Output: `build\libs\1.21-FSG-1.0.jar`
 java -jar build\libs\1.21-FSG-1.0.jar
 ```
 
-Headless continuous search (hits to stdout):
-
-```bat
-java -cp build\libs\1.21-FSG-1.0.jar project.Fsg121Project --cli
-java -cp build\libs\1.21-FSG-1.0.jar project.Fsg121Project --cli --out fsgresults.txt 8
-```
-
-## What’s included
-
-| Area | Role |
-|------|------|
-| `project/` | GUI, search engine, structure-seed gate, i18n, native CLI unpack |
-| `ChestLoot121/` | 1.21 ruined-portal loot table |
-| `ruinedportalgenerator/` | Cubiomes IPC, portal geometry, bastion stage helpers |
-| `src/main/resources/native/` | Cubiomes CLI binaries embedded in the jar |
-
-## Gradle dependencies (minimal)
-
-- seedfinding: `mc_core`, `mc_feature`, `mc_biome`, `mc_terrain`, `mc_noise`, `mc_math`, `mc_seed`
-- JitPack: [BastionGenerator](https://github.com/Xinyuuu7/BastionGenerator)
-
-Not used (and not included): VillageGenerator, seed-checker, latticg, mc_reversal.
-
-## License / credits
+## Credits
 
 - Cubiomes for biomes / terrain / structure placement
 - seedfinding libraries
