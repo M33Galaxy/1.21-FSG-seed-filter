@@ -10,6 +10,8 @@ Litable Ruined portal from chunk (0,0) to chunk (3,3), Village (for food/beds) s
 
 Ruined portal chest has at least 27 iron nuggets.
 
+Spawnpoint within 3 chunks from ruined portal.
+
 ### Nether
 
 Bastion within 100 blocks from origin, and fortress within 160 blocks from bastion.
