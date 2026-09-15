@@ -1,0 +1,24 @@
+# Build / IDE
+.gradle/
+build/
+out/
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Native build intermediates
+native/*.o
+native/_runtime.cp
+native/bench_*
+native/terrain_build/
+
+# Runtime outputs
+fsgresults.txt
+*.hprof
+hs_err_pid*.log
+replay_pid*.log
+__pycache__/
+
+# Keep shipped CLIs under src/main/resources/native/

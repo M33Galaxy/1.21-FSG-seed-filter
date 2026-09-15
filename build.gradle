@@ -1,0 +1,54 @@
+plugins {
+    id("java")
+}
+
+group = "fsg"
+version = "1.0"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.seedfinding.com"
+    }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation('com.seedfinding:mc_math:LATEST')
+    implementation('com.seedfinding:mc_seed:LATEST')
+    implementation('com.seedfinding:mc_core:1.210.0')
+    implementation('com.seedfinding:mc_noise:LATEST')
+    implementation('com.seedfinding:mc_biome:LATEST')
+    implementation('com.seedfinding:mc_terrain:LATEST')
+    implementation('com.seedfinding:mc_feature:LATEST')
+    implementation('com.github.Xinyuuu7:BastionGenerator:main-SNAPSHOT'){transitive=false}
+}
+
+tasks.named("jar", Jar) {
+	manifest {
+		attributes("Main-Class": "project.Fsg121Gui")
+	}
+}
+
+tasks.register("fatJar", Jar) {
+	group = "build"
+	description = "Runnable fat JAR (GUI + deps + cubiomes CLIs)"
+	archiveFileName = "1.21-FSG-1.0.jar"
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+	manifest {
+		attributes("Main-Class": "project.Fsg121Gui")
+	}
+	from(sourceSets.main.output)
+	dependsOn(configurations.runtimeClasspath)
+	from({
+		configurations.runtimeClasspath.collect { f ->
+			f.isDirectory() ? f : zipTree(f)
+		}
+	}) {
+		exclude("META-INF/*.SF", "META-INF/*.DSA", "META-INF/*.RSA", "META-INF/*.EC")
+	}
+}
+
+tasks.named("build").configure {
+	dependsOn("fatJar")
+}
