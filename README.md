@@ -1,8 +1,6 @@
-# 1.21+ FSG Seed Finder
+# 1.21+ FSG Seed Filter
 
-Minecraft **1.21** FSG-style seed searcher with a small Swing GUI (中文 / English).
-
-Pipeline: random 48-bit structure seeds → cheap LCG gate → cubiomes nether/OW checks → expand 65536 world seeds → blaze / barter / portal / village / bastion / terrain / spawn filters.
+Minecraft **1.21+** Filtered Seed Glitchless filter with a small Swing GUI (中文 / English).
 
 ## Requirements
 
