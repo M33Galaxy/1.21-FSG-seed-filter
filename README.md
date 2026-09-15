@@ -1,6 +1,26 @@
 # 1.21+ FSG Seed Filter
 
-Minecraft **1.21+** Filtered Seed Glitchless filter with a small Swing GUI (中文 / English).
+Minecraft **1.21-26.2** Filtered Seed Glitchless filter with a small Swing GUI (中文 / English).
+
+## Filter Conditions
+
+### Overworld
+
+Litable Ruined portal from chunk (0,0) to chunk (3,3), Village (for food/beds) starting point from chunk (0,0) to chunk (6,6).
+
+Ruined portal chest has at least 27 iron nuggets.
+
+### Nether
+
+Bastion within 100 blocks from origin, and fortress within 160 blocks from bastion.
+
+Guarenteed at least 16 pearls within 108 piglin barters, and 20 obsidian in all bastion chests + 108 piglin barters + rest obsidian from ow ruined portal after litting the portal.
+
+At least 1 looting 3 sword from ow ruined portal/bastion.
+
+At least 6 rods within 3 blaze kills.
+
+**The conditions sometimes might not match (e.g. sometimes the ruined portal is not litable) due to we didn't simulated the whole world generation.**
 
 ## Requirements
 
